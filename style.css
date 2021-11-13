@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@keyframes showTopText {
+  0% { transform: translate3d(0, 100%, 0); }
+  40%, 60% { transform: translate3d(0, 50%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+@keyframes showBottomText {
+  0% { transform: translate3d(0, -100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+.animated-title {
+  color: #222;
+  font-family: "MV boli", Arial, sans-serif;
+  height: 90vmin;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vmin;
+}
+.animated-title > div {
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+.animated-title > div div {
+  font-size: 12vmin;
+  padding: 2vmin 0;
+  position: absolute;
+}
+.animated-title > div div span {
+  display: block;
+}
+.animated-title > div.text-top {
+  border-bottom: 1vmin solid #000;
+  top: 0;
+}
+.animated-title > div.text-top div {
+  animation: showTopText 1.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+  color: #F2AA4CFF;
+}
+.animated-title > div.text-top div span:first-child {
+color: #F2AA4CFF;
+}
+.animated-title > div.text-bottom {
+color: #F2AA4CFF;
+  bottom: 0;
+}
+.animated-title > div.text-bottom div {
+  animation: showBottomText .5s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
+}
+
+
+@keyframes vanish{
+  to {opacity: 0%;}
+}
+
+@keyframes appear{
+  from {opacity: 0%;}
+  to {opacity: 100%;}
+}
+
+
+#helpdiv{
+  animation: vanish;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 3.5s;
+}
+
+.content{
+  opacity: 0%;
+
+  background-image: url("img/234234324.png");
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%; 
+
+  animation: appear;
+  animation-duration: 1s;
+  animation-delay: 4.7s;
+  animation-fill-mode: forwards;
+}
+
+html{
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  text-shadow: 0px 0px 4px black;
+  font-family: "MV boli";
+}
+
+#title{
+  text-align: center;
+  color: #E94B3CFF;
+}
+
+#heading{
+  text-align: center;
+  color: #E94B3CFF;
+}
+
+#desc{
+  color: #E94B3CFF;
+
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
